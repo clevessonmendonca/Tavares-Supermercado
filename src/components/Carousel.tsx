@@ -16,7 +16,7 @@ const Carousel = () => {
         el: ".swiper-pagination",
         clickable: true,
       },
-      loop: true
+      loop: true,
     });
 
     return () => {
@@ -25,8 +25,8 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden">
-      <div className="swiper-container relative  w-full">
+    <div className="overflow-hidden my-4">
+      <div className="swiper-container relative w-full">
         <div className="swiper-wrapper">
           <div className="swiper-slide max-w-full">
             <Image
@@ -57,10 +57,8 @@ const Carousel = () => {
           </div>
         </div>
         <div className="swiper-pagination"></div>
-        <div className="swiper-button-next !text-white">
-        </div>
-        <div className="swiper-button-prev !text-white">
-        </div>
+        <div className="swiper-button-next !text-white"></div>
+        <div className="swiper-button-prev !text-white"></div>
       </div>
     </div>
   );

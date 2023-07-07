@@ -1,0 +1,9 @@
+{
+  "paymentMethods": [
+    {
+      "id": 1,
+      "name": "Visa",
+      "image": "public/PaymentMethods/Visa.png"
+    }
+  ]
+}
