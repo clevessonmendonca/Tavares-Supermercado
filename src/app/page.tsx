@@ -1,23 +1,30 @@
 "use client";
-import Navbar from "../components/Header";
 import Hero from "../components/Hero";
 import { Offers } from "../components/Offers";
 import { Stores } from "../components/Stores";
-import { Footer } from "../components/Footer";
 import { AdOffers } from "../components/AdOffers";
 import { Contact } from "../components/Contact";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { Head } from "./Head";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
+      <Head />
+
       <main>
         <div>
           <Hero />
           <Offers />
-          <section className="bg- bg-work-with-us bg-cover px-32 py-8 text-white">
-            <div className="mx-auto flex flex-col text-center max-w-screen-2xl md:text-start gap-2 md:flex-row items-center justify-around">
+          <section className="bg- bg-work-with-us bg-cover px-32 py-10 text-white">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="mx-auto flex max-w-screen-2xl flex-col items-center justify-around gap-2 text-center md:flex-row md:text-start"
+            >
               <h1 className="max-w-md text-4xl font-bold">
                 Trabalhe Conosco e Faça parte da Equipe{" "}
                 <span className="text-secondary">Tavares</span>
@@ -27,10 +34,16 @@ export default function Home() {
                 Supermercados. Venha fazer parte do nosso time e contribuir para
                 o sucesso do nosso negócio.
               </p>
-            </div>
-            <button className="mx-auto mt-8 flex rounded-md bg-secondary px-6 py-2 text-center text-lg font-medium text-blue-600 shadow-lg shadow-primary/90">
-              <Link href={""}>Clique Aqui e Faça parte da Equipe Tavares</Link>
-            </button>
+            </motion.div>
+            <motion.button
+              className="mx-auto mt-8 flex rounded-md bg-secondary px-6 py-2 text-center text-lg font-medium text-blue-600 shadow-lg shadow-primary/90 hover:brightness-90 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              <Link href={"#contato"}>
+                Clique Aqui e Faça parte da Equipe Tavares
+              </Link>
+            </motion.button>
           </section>
           <Stores />
           <AdOffers />
@@ -38,8 +51,6 @@ export default function Home() {
           <Contact />
         </div>
       </main>
-
-      <Footer />
     </>
   );
 }

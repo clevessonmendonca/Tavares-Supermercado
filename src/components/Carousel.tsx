@@ -17,6 +17,10 @@ const Carousel = () => {
         clickable: true,
       },
       loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
     });
 
     return () => {
@@ -25,7 +29,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden my-4">
+    <div className="overflow-hidden max-w-screen-2xl mx-auto">
       <div className="swiper-container relative w-full">
         <div className="swiper-wrapper">
           <div className="swiper-slide max-w-full">

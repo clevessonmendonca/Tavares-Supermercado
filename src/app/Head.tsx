@@ -3,7 +3,8 @@ import React from "react";
 export const Head = () => {
   return (
     <>
-      <title>Tavares Supermercado</title>
+      <link rel="icon" href="/favicon.png" sizes="any" />
+      <title>Tavares Supermercado | Preço Baixo Sempre</title>
     </>
   );
 };
