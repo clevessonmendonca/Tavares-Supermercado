@@ -52,7 +52,7 @@ export const Offers = () => {
         >
           <Link
             href={"/"}
-            className="rounded-md bg-radial-tavares px-6 py-2 text-white shadow-md font-medium transition-all hover:brightness-125"
+            className="rounded-md bg-radial-tavares px-6 py-2 font-medium text-white shadow-md transition-all hover:brightness-125"
           >
             Receber Todas as Ofertas
           </Link>

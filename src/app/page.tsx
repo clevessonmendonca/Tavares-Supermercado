@@ -40,14 +40,13 @@ export default function Home() {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              <Link href={"#contato"}>
+              <Link href="/contato">
                 Clique Aqui e Faça parte da Equipe Tavares
               </Link>
             </motion.button>
           </section>
           <Stores />
           <AdOffers />
-
           <Contact />
         </div>
       </main>

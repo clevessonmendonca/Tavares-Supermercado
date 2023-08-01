@@ -1,9 +1,9 @@
 import React from "react";
 
-export const OffersHead = () => {
+export const Head = () => {
   return (
     <>
-      <title>Ofertas - Tavares Supermercado</title>
+      <title>Ofertas | Tavares Supermercado</title>
     </>
   );
 };

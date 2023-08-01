@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 
 export const AdOffers = () => {
   return (
-    <section className="bg-offers-background bg-cover py-6">
+    <section className="bg-offers-background-mobile w-full lg:bg-offers-background lg:bg-center bg-cover max-w-screen-2xl mx-auto py-6">
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         exit={{ opacity: 0 }}
         transition={{ duration: 0.5 }}
-        className="mx-auto max-w-screen-xl p-4 py-10"
+        className="mx-auto max-w-screen-xl p-4 py-8"
       >
         <h1 className="max-w-sm text-5xl font-bold text-white">
           Não Perca nossas <span className="text-secondary">Ofertas</span>{" "}

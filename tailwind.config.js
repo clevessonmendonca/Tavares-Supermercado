@@ -11,6 +11,7 @@ module.exports = {
         "radial-tavares":
           "radial-gradient(50% 50% at 50% 50%, #03A8E8 0%, #0054FF 100%)",
         "offers-background": "url('/images/offers.png')",
+        "offers-background-mobile": "url('/images/offers-mobile.png')",
         "background": "url('/logo-background.png')",
         "work-with-us": "url('/images/tavares-work.png')",
       },

@@ -23,7 +23,6 @@ export const Contact = () => {
     setTimeout(() => {
       setSubmited(false);
     }, 5000);
-    console.log("Contact");
   }, [submited]);
 
   const onSubmit = (data: ContactFormData) => {

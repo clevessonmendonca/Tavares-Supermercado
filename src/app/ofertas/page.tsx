@@ -3,12 +3,13 @@
 import { AdOffers } from "@/components/AdOffers";
 import { Contact } from "@/components/Contact";
 import { Offers } from "@/components/Offers";
-import Image from "next/image";
-import { ArrowDown, Link } from "phosphor-react";
+import { Head } from "./Head";
+import Link from "next/link";
 
 export default function Ofertas() {
   return (
     <>
+      <Head />
       <main>
         <div className="bg-primary px-4 pb-8 pt-14">
           <h1 className="text-center text-8xl font-extrabold text-white">
@@ -31,6 +32,24 @@ export default function Ofertas() {
         </div>
         <div>
           <Offers />
+          <div>
+            <h2 className="relative text-center text-3xl font-bold">
+              Baixe nosso Tabloide
+              <span className="absolute bottom-2 left-1/2 h-[2px] w-40 -translate-x-1/2 translate-y-4 transform rounded-full bg-secondary" />
+            </h2>
+            <p className="mx-auto mt-4 text-center text-sm text-gray-900">
+              Para baixar nosso tabloide clique no botão{" "}
+              <span className="font-semibold">Baixar</span>.
+            </p>
+            <div className="mt-4 flex items-center justify-center">
+              <Link
+                href="/"
+                className="mx-auto inline-block rounded-md bg-secondary px-8 py-4 text-lg font-bold shadow-md transition-all hover:brightness-125"
+              >
+                Baixar
+              </Link>
+            </div>
+          </div>
 
           <AdOffers />
           <Contact />

@@ -35,14 +35,8 @@ export default function Contato() {
             Entre em Contato
           </h1>
 
-          <div className="mx-auto max-w-md py-7">
-            <form action="">
-              <input
-                placeholder="Nome"
-                required
-                className="h-14 w-full rounded-lg border-2 border-primary bg-gray-50 p-4 text-black placeholder:text-gray-600 focus:outline-none focus:ring-2"
-              />
-            </form>
+          <div>
+            
           </div>
         </div>
         <div>

@@ -3,6 +3,12 @@ import React, { useEffect } from "react";
 import Swiper, { Navigation, Pagination } from "swiper";
 import "swiper/swiper-bundle.min.css";
 
+const banners = [
+  { title: "Banner 01", path: "/images/banners/BANNER-01.png" },
+  { title: "Banner 02", path: "/images/banners/BANNER-02.png" },
+  { title: "Banner 03", path: "/images/banners/BANNER-03.png" },
+];
+
 Swiper.use([Navigation, Pagination]);
 
 const Carousel = () => {
@@ -29,36 +35,22 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden max-w-screen-2xl mx-auto">
+    <div className="mx-auto max-w-screen-2xl overflow-hidden">
       <div className="swiper-container relative w-full">
         <div className="swiper-wrapper">
-          <div className="swiper-slide max-w-full">
-            <Image
-              src="/images/slide1.png"
-              className="w-full"
-              alt="Slide 1"
-              width={1400}
-              height={500}
-            />
-          </div>
-          <div className="swiper-slide max-w-full">
-            <Image
-              src="/images/slide1.png"
-              alt="Slide 2"
-              className="w-full"
-              width={1400}
-              height={500}
-            />
-          </div>
-          <div className="swiper-slide max-w-full">
-            <Image
-              src="/images/slide1.png"
-              alt="Slide 2"
-              className="w-full"
-              width={1400}
-              height={500}
-            />
-          </div>
+          {banners.map((banner) => (
+            <div className="swiper-slide max-w-full">
+              <div key={banner.path} className="swiper-slide max-w-full">
+                <Image
+                  src={banner.path}
+                  alt={banner.title}
+                  className="w-full"
+                  width={2500}
+                  height={600}
+                />
+              </div>
+            </div>
+          ))}
         </div>
         <div className="swiper-pagination"></div>
         <div className="swiper-button-next !text-white"></div>
