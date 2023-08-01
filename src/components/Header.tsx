@@ -6,10 +6,9 @@ import { usePathname } from "next/navigation";
 import { navLinks } from "./NavLinks";
 
 const Navbar = () => {
-  const widthScreen = window.screen.width;
   const [objectVisible, setObjectVisible] = useState(
-    widthScreen < 768 ? true : false
-  );
+    typeof window !== 'undefined' ? window.screen.width < 768 ? true : false : false);
+
   const pathname = usePathname();
 
   const handleResize = () => {
