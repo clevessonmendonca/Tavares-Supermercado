@@ -39,14 +39,14 @@ export default function Ofertas() {
             </h2>
             <p className="mx-auto mt-4 text-center text-sm text-gray-900">
               Para baixar nosso tabloide clique no botão{" "}
-              <span className="font-semibold">Baixar</span>.
+              <span className="font-semibold">Ver Tabloide</span>.
             </p>
             <div className="mt-4 flex items-center justify-center">
               <Link
-                href="/"
-                className="mx-auto inline-block rounded-md bg-secondary px-8 py-4 text-lg font-bold shadow-md transition-all hover:brightness-125"
+                href="/TABLOIDE.jpg"
+                className="mb-8 mx-auto inline-block rounded-md bg-secondary px-8 py-4 text-lg font-bold shadow-md transition-all hover:scale-105 hover:brightness-90"
               >
-                Baixar
+                Ver Tabloide
               </Link>
             </div>
           </div>

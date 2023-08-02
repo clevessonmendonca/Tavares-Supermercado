@@ -31,12 +31,12 @@ const Navbar = () => {
           <nav>
             <ul className="flex gap-2 divide-x-2 divide-slate-300 text-xs font-medium leading-3">
               <li>
-                <Link href={"/sobre"} className="hover:brightness-90">
+                <Link href={"/sobre"} rel="preload" className="hover:brightness-90">
                   Sobre o Tavares
                 </Link>
               </li>
               <li className="px-2 hover:brightness-90">
-                <Link href={"/"}>Formas de Pagamento</Link>
+                <Link href={"/"} rel="preload">Formas de Pagamento</Link>
               </li>
             </ul>
           </nav>

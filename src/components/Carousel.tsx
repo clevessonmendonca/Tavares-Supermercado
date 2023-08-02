@@ -24,7 +24,7 @@ const Carousel = () => {
       },
       loop: true,
       autoplay: {
-        delay: 5000,
+        delay: 100,
         disableOnInteraction: false,
       },
     });
@@ -39,22 +39,20 @@ const Carousel = () => {
       <div className="swiper-container relative w-full">
         <div className="swiper-wrapper">
           {banners.map((banner) => (
-            <div key={banner.path} className="swiper-slide max-w-full">
-              <div className="swiper-slide max-w-full">
-                <Image
-                  src={banner.path}
-                  alt={banner.title}
-                  className="w-full"
-                  width={2500}
-                  height={600}
-                />
-              </div>
+            <div key={banner.path} className="swiper-slide">
+              <Image
+                src={banner.path}
+                alt={banner.title}
+                className="w-full"
+                width={2500}
+                height={600}
+              />
             </div>
           ))}
         </div>
-        <div className="swiper-pagination"></div>
-        <div className="swiper-button-next !text-white"></div>
-        <div className="swiper-button-prev !text-white"></div>
+        <div className="swiper-pagination" />
+        <div className="swiper-button-next !text-white" />
+        <div className="swiper-button-prev !text-white" />
       </div>
     </div>
   );
