@@ -34,7 +34,7 @@ export const Contact = () => {
   return (
     <section
       id="contato"
-      className="flex items-center justify-center bg-gray-100 bg-background px-6 py-16 md:py-32"
+      className="flex items-center justify-center bg-gray-100 bg-background px-6 py-14 md:py-14"
     >
       <motion.div
         initial={{ opacity: 0 }}
@@ -75,7 +75,7 @@ export const Contact = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             transition={{ type: "spring", stiffness: 200, damping: 10 }}
-            className="mx-auto rounded-lg border-b-4 border-r-4 border-black bg-secondary px-6 py-2 font-medium shadow-md"
+            className="mx-auto rounded-lg border-b-4 border-r-4 border-black bg-secondary px-8 py-3 text-lg font-medium shadow-md"
           >
             Garantir Ofertas
           </motion.button>

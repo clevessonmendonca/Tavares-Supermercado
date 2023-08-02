@@ -25,7 +25,7 @@ export default function Sobre() {
             </svg>
           </span>
         </div>
-        <div className="bg-background pt-8 text-black">
+        <div className="pt-8 text-black">
           <div className="container mx-auto px-4">
             <h1 className="mb-4 text-center text-2xl font-bold">
               Sobre o Tavares Supermercado
@@ -90,7 +90,7 @@ export default function Sobre() {
             </div>
           </div>
           <div className="bg-secondary text-primary -mb-7 pt-2 pb-12 mt-12">
-            <p className="mx-auto my-8 max-w-xl text-center text-lg font-medium">
+            <p className="mx-auto my-8 max-w-xl px-4 text-center text-lg font-medium">
               Agradecemos por fazer parte da nossa história e por confiar em nós
               para suas compras diárias. Estamos comprometidos em continuar
               crescendo e servindo nossa comunidade da melhor maneira possível.

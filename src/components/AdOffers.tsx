@@ -24,7 +24,7 @@ export const AdOffers = () => {
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
-          className="rounded-lg bg-secondary px-6 py-2 text-lg font-medium hover:scale-105 hover:brightness-90"
+          className="rounded-lg bg-secondary px-8 py-3 text-lg font-medium hover:scale-105 hover:brightness-90"
         >
           Receber as Melhores Ofertas
         </motion.button>

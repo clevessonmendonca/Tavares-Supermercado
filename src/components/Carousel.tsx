@@ -39,8 +39,8 @@ const Carousel = () => {
       <div className="swiper-container relative w-full">
         <div className="swiper-wrapper">
           {banners.map((banner) => (
-            <div className="swiper-slide max-w-full">
-              <div key={banner.path} className="swiper-slide max-w-full">
+            <div key={banner.path} className="swiper-slide max-w-full">
+              <div className="swiper-slide max-w-full">
                 <Image
                   src={banner.path}
                   alt={banner.title}

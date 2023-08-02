@@ -52,7 +52,7 @@ export const Offers = () => {
         >
           <Link
             href={"/"}
-            className="rounded-md bg-radial-tavares px-6 py-2 font-medium text-white shadow-md transition-all hover:brightness-125"
+            className="rounded-md bg-radial-tavares px-6 py-2 font-medium text-lg md:text-base text-white shadow-md transition-all hover:brightness-125"
           >
             Receber Todas as Ofertas
           </Link>
@@ -61,7 +61,7 @@ export const Offers = () => {
         <motion.span whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
           <Link
             href={"/ofertas"}
-            className="rounded-md border-[1px] border-primary px-6 py-2 shadow-md transition-all hover:brightness-125"
+            className="rounded-md border-[1px] border-primary px-6 py-2 text-lg md:text-base shadow-md transition-all hover:brightness-125"
           >
             Ver mais
           </Link>
