@@ -1,49 +1,38 @@
 "use client";
 
-import { AdOffers } from "@/components/AdOffers";
-import { Head } from "./Head";
 import { motion } from "framer-motion";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+
+import { AdOffers } from "@/components/AdOffers";
+import { Head } from "./Head";
 
 const contactFormSchema = z.object({
   name: z.string().min(3).max(100),
-  email: z.string().email(),
-  message: z.string(),
+  email: z.string().email().optional(),
+  message: z.string().optional(),
 });
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
 
-export default function Contato() {
-  const [submited, setSubmited] = useState(false);
+export default function ContactPage() {
   const { handleSubmit, register } = useForm<ContactFormData>({
     resolver: zodResolver(contactFormSchema),
   });
 
-  useEffect(() => {
-    setTimeout(() => {
-      setSubmited(false);
-    }, 5000);
-  }, [submited]);
+  const handleFormSubmit = (data: ContactFormData) => {
+    const emailBody = `
+      Nome: ${data.name}
+      Email: ${data.email}
+      Mensagem: ${data.message}
+    `;
 
-  const onSubmit = (data: ContactFormData) => {
-    console.log(data);
-
-    const corpoDoEmail = `
-    Nome: ${data.name}
-    Email: ${data.email}
-    Mensagem: ${data.message}
-  `;
-
-    const linkParaEmail = `mailto:clevesson.contato@gmail.com?subject=Trabalhe Conosco&body=${encodeURIComponent(
-      corpoDoEmail
+    const emailLink = `mailto:clevesson.contato@gmail.com?subject=Trabalhe Conosco&body=${encodeURIComponent(
+      emailBody
     )}`;
 
-    window.location.href = linkParaEmail;
-
-    setSubmited(true);
+    window.location.href = emailLink;
   };
 
   return (
@@ -72,11 +61,9 @@ export default function Contato() {
         </div>
         <div>
           <div className="px-4 py-8">
-            <h3 className="pb-4 text-center text-2xl font-bold text-primary">
-              Formulário
-            </h3>
+            <h3 className="pb-4 text-center text-2xl font-bold">Formulário</h3>
             <form
-              onSubmit={handleSubmit(onSubmit)}
+              onSubmit={handleSubmit(handleFormSubmit)}
               className="mx-auto flex w-full max-w-2xl flex-col gap-4"
             >
               <input
@@ -89,13 +76,11 @@ export default function Contato() {
                 {...register("email")}
                 type="email"
                 placeholder="Email"
-                required={false}
                 className="h-14 w-full rounded-lg border-2 border-primary bg-gray-50 p-4 text-black placeholder:text-gray-600 focus:outline-none focus:ring-2"
               />
               <textarea
                 {...register("message")}
                 placeholder="Mensagem"
-                required={false}
                 className="h-32 w-full resize-none rounded-lg border-2 border-primary bg-gray-50 p-4 text-black placeholder:text-gray-600 focus:outline-none focus:ring-2"
               />
               <motion.button
@@ -103,6 +88,7 @@ export default function Contato() {
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 200, damping: 10 }}
                 className="mx-auto rounded-lg border-b-4 border-r-4 border-black bg-secondary px-12 py-3 text-xl font-medium uppercase shadow-md focus:ring-4"
+                type="submit"
               >
                 Enviar
               </motion.button>
