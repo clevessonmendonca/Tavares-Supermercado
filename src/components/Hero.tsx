@@ -1,10 +1,10 @@
-import Carousel from "./Carousel";
+import CarouselHome from "./Carousel";
 
 const Hero = () => {
   return (
     <section>
       <div>
-        <Carousel />
+        <CarouselHome />
       </div>
     </section>
   );

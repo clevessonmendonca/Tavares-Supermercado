@@ -11,7 +11,7 @@ const banners = [
 
 Swiper.use([Navigation, Pagination]);
 
-const Carousel = () => {
+const CarouselHome = () => {
   useEffect(() => {
     const swiper = new Swiper(".swiper-container", {
       navigation: {
@@ -58,4 +58,5 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+
+export default CarouselHome;

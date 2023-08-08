@@ -1,7 +1,6 @@
 "use client";
 
 import { AdOffers } from "@/components/AdOffers";
-import { ArrowDown } from "phosphor-react";
 import { Head } from "./Head";
 import { Contact } from "@/components/Contact";
 
@@ -36,7 +35,9 @@ export default function Contato() {
           </h1>
 
           <div>
-            
+            <div>
+
+            </div>
           </div>
         </div>
         <div>

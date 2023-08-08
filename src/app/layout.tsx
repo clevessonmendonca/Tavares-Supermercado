@@ -5,7 +5,6 @@ import { Poppins } from "next/font/google";
 import { Head } from "./Head";
 import Navbar from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import Skeleton from "react-loading-skeleton";
 import Loading from "./loading";
 
 const poppins = Poppins({
