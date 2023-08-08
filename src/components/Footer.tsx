@@ -62,8 +62,8 @@ export const Footer = () => {
               Atendimento
             </h2>
             <h3>Horário de Atendimento:</h3>
-            <p>De Segunda a Sábado das 07h às 22h</p>
             <p>Domingo das 07h às 20h</p>
+            <p>De Segunda a Sábado das 07h às 22h</p>
           </div>
         </div>
       </div>

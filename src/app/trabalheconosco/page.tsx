@@ -28,7 +28,7 @@ export default function ContactPage() {
       Mensagem: ${data.message}
     `;
 
-    const emailLink = `mailto:clevesson.contato@gmail.com?subject=Trabalhe Conosco&body=${encodeURIComponent(
+    const emailLink = `mailto:RH.smtavares@gmail.com?subject=Trabalhe Conosco&body=${encodeURIComponent(
       emailBody
     )}`;
 
